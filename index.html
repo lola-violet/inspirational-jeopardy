@@ -8,7 +8,35 @@
     <title>Inspirational Jeopardy</title>
 </head>
 <body>
-    
+    <header>
+        Inspirational Jeorpardy
+    </header>
+    <div id="parameters">
+        <h3>Enter Parameters:</h3>
+        <select name="Category" id="category-quiz"></select>
+        <br>
+        <select name="Difficulty" id="select-difficult"></select>
+        <br>
+        <button id="start-quiz">Generate Jeopardy!</button>
+    </div>
+    <div id="questions">
+        <h3 id="question1">Question #1</h3>
+        <input type="text" id="answer1">
+        <br>
+        <button id="generateClues">I need a clue</button>
+        <br>
+        <button id="answer">Submit Answer</button>
+    </div>
+    <div>
+        <h3>Final Score</h3>
+        <h4 id="finalize"></h4>
+        <p id="results1"></p>
+        <p id="results2"></p>
+        <p id="results3"></p>
+        <p id="results4"></p>
+        <p id="results5"></p>
+        <button id="return">Start Again</button>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
