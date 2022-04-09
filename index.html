@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="./style.css">
     <title>Inspirational Jeopardy</title>
 </head>
@@ -21,11 +22,19 @@
     </div>
     <div id="questions">
         <h3 id="question1">Question #1</h3>
-        <input type="text" id="answer1">
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
         <br>
-        <button id="generateClues">I need a clue</button>
+        <a id="generateClues" class="waves-effect waves-light btn">I need a clue</a>
         <br>
-        <button id="answer">Submit Answer</button>
+        <a id="submit" class="waves-effect waves-light btn">Submit Answer</a>
     </div>
     <div>
         <h3>Final Score</h3>
@@ -35,8 +44,9 @@
         <p id="results3"></p>
         <p id="results4"></p>
         <p id="results5"></p>
-        <button id="return">Start Again</button>
+        <a id="return" class="waves-effect waves-light btn-large">Start Again!</a>
     </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
