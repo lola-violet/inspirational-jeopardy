@@ -13,54 +13,69 @@
     <title>Inspirational Jeopardy</title>
 </head>
 <body>
-    <header>
-        Inspirational Jeorpardy
-    </header>
-    <div id="parameters">
-        <h3>Enter Parameters:</h3>
-        <select name="Category" id="category-quiz"></select>
-        <br>
-        <select name="Difficulty" id="select-difficult"></select>
-        <br>
-        <a id="start-quiz" class="waves-effect waves-light btn">Generate Jeopardy!</a>
+  <header class="teal">
+    <h1 class="center-align">Inspirational Jeopardy</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12 center-align grey">
+
+        <div id="parameters">
+          <h3>Enter Parameters:</h3>
+          <select name="Category" id="category-quiz"></select>
+          <br>
+          <select name="Difficulty" id="select-difficult"></select>
+          <br>
+          <a id="start-quiz" class="waves-effect waves-light btn">Generate Jeopardy!</a>
+        </div>
+
+      </div>
     </div>
-    <div id="questions">
-        <h3 id="question1">Question #1</h3>
-        <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea"></textarea>
-                </div>
-              </div>
-            </form>
+      
+    <div class="row">
+      <div class="col s12 center-align grey lighten-1">
+
+        <div id="questions">
+          <h3 id="question1">Question #1</h3>
+          <div class="form">
+            <div class="input-field">
+              <textarea id="textarea1" class="materialize-textarea" placeholder="Type your answer here"></textarea>
+            </div>
           </div>
-        <br>
-        <a id="generateClues" class="waves-effect waves-light btn">I need a clue</a>
-        <br>
-        <button id="answer" class="myAnswers">Submit Answer</button>
-        <a id="submit" class="waves-effect waves-light btn">Submit Answer</a>
-        <a id="submit" class="waves-effect waves-light btn">Submit Answer</a>
+          <br>
+          <a id="generateClues" class="btn waves-effect waves-light">I need a clue</a>
+          <button id="answer" class="btn waves-effect waves-light myAnswers" type="submit">Submit Answer</button>
+        </div>
+
+      </div>
     </div>
+
     <section id="myModal" class="hide">
-        <p id="myAnswer"></p>
-        <h3 id="quote">Quote in the modal</h3>
-        <button id="nextQuestion"></button>
+      <p id="myAnswer"></p>
+      <h3 id="quote">Quote in the modal</h3>
+      <button id="nextQuestion"></button>
     </section>
-    <div>
-        <h3></h3>
-        <h4 id="finalize"></h4>
-        <p id="results1"></p>
-        <p id="results2"></p>
-        <p id="results3"></p>
-        <p id="results4"></p>
-        <button id="return">Start Again</button>
-        <p id="results5"></p>
-        <a id="return" class="waves-effect waves-light btn-large">Start Again!</a>
-        <p id="results5"></p>
-        <a id="return" class="waves-effect waves-light btn-large">Start Again!</a>
+
+    <div class="row">
+      <div class="col s12 center-align grey lighten-3">
+
+        <div id="resultpage">
+          <h4 id="finalize"></h4>
+          <p id="results1"></p>
+          <p id="results2"></p>
+          <p id="results3"></p>
+          <p id="results4"></p>
+          <p id="results5"></p>
+          <a id="return" class="waves-effect waves-light btn-large">Start Again!</a>
+        </div>
+
+      </div>
     </div>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="./script.js"></script>
+
+  </div>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
