@@ -13,62 +13,73 @@
     <title>Inspirational Jeopardy</title>
 </head>
 <body>
-    <header>
-        Inspirational Jeorpardy
-    </header>
-    <div id="parameters">
-        <h3>Enter Parameters:</h3>
-        <select name="Category" id="category-quiz"></select>
-        <br>
-        <select name="Difficulty" id="select-difficult"></select>
-        <br>
-        <a id="start-quiz" class="waves-effect waves-light btn">Generate Jeopardy!</a>
-    </div>
-    <div id="questions" class="hide">
-        <h3 id="question1">Question #1</h3>
-        <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea"></textarea>
-                </div>
-              </div>
-            </form>
-          </div>
-        <br>
-        <a id="generateClues" class="waves-effect waves-light btn">I need a clue</a>
-        <br>
-        <a id="submit" class="waves-effect waves-light btn">Submit Answer</a>
-    </div>
-    <div id = "modal1" class="modal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
+  <header class="teal">
+    <h1 class="center-align">Inspirational Jeopardy</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12 center-align grey">
+
+        <div id="parameters">
+          <h3>Enter Parameters:</h3>
+          <select name="Category" id="category-quiz"></select>
+          <br>
+          <select name="Difficulty" id="select-difficult"></select>
+          <br>
+          <a id="start-quiz" class="waves-effect waves-light btn">Generate Jeopardy!</a>
         </div>
+
       </div>
-    <div>
-        <h3></h3>
-        <h4 id="finalize"></h4>
-        <p id="results1"></p>
-        <p id="results2"></p>
-        <p id="results3"></p>
-        <p id="results4"></p>
-        <p id="results5"></p>
-        <a id="return" class="waves-effect waves-light btn-large hide">Start Again!</a>
     </div>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script  src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="  crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+      
+    <div class="row">
+      <div class="col s12 center-align grey lighten-1">
+
+        <div id="questions">
+          <h3 id="question1">Question #1</h3>
+          <div class="form">
+            <div class="input-field">
+              <textarea id="textarea1" class="materialize-textarea" placeholder="Type your answer here"></textarea>
+            </div>
+          </div>
+          <br>
+          <a id="generateClues" class="btn waves-effect waves-light">I need a clue</a>
+          <button id="submit" class="btn waves-effect waves-light myAnswers" type="submit">Submit Answer</button>
+        </div>
+
+      </div>
+    </div>
+
+    <section id="modal1" class="hide">
+      <p id="myAnswer"></p>
+      <h3 id="quote">Quote in the modal</h3>
+      <button id="nextQuestion"></button>
+    </section>
+
+    <div class="row">
+      <div class="col s12 center-align grey lighten-3">
+
+        <div id="resultpage">
+          <h4 id="finalize"></h4>
+          <p id="results1"></p>
+          <p id="results2"></p>
+          <p id="results3"></p>
+          <p id="results4"></p>
+          <p id="results5"></p>
+          <a id="return" class="waves-effect waves-light btn-large">Start Again!</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
