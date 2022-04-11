@@ -5,10 +5,14 @@ var submitBtn = document.getElementById("submit")
 var questionContainer = document.getElementById("questions")
 var playAgainBtn = document.getElementById("return")
 var resultPage = document.getElementById("resultpage")
-var questionCount = 0;
 var parametersContainer = document.getElementById("parameters")
 var userAnswer = document.getElementById("textarea1")
+var questionCount = 0;
 
+
+// TODO: EVERYTHING RELATING TO PARAMETERS
+
+// function to pull a question and put it on the screen
 function getJservice() {
   var requestUrl = "http://jservice.io/api/random";
 
@@ -19,7 +23,8 @@ function getJservice() {
     .then(function (data) {
 
       questionText.textContent = data[0].question;
-      answerText = data[0].answer;
+      var answerTemp =  removeTags(data[0].answer);
+      answerText = answerTemp.replace(/&/, "and")
 
       console.log(answerText)
       questionCount++;
@@ -30,7 +35,7 @@ function getJservice() {
     });
 }
 
-
+// function to pull quotes
 function getQuote() {
   var requestUrl = "https://type.fit/api/quotes";
   fetch(requestUrl)
@@ -39,7 +44,7 @@ function getQuote() {
     })
     .then(function (data) {
       var randomNumber = Math.floor(Math.random() * 1643);
-
+// TODO: set this to show up in the quote block between questions
       const quoteText = document.createElement("h2");
       const authorText = document.createElement("h4");
 
@@ -51,21 +56,24 @@ function getQuote() {
     });
 }
 
+// function that hides shows the quiz
 function showQuiz(){
   questionContainer.classList.remove("hide")
 }
 
+// function that hides the parameters
 function hideParameters(){
   parametersContainer.classList.add("hide")
 }
 
+// function that runs the quiz for the first question
 $("#start-quiz").on("click", function (){
   hideParameters();
   getJservice();
   showQuiz();
 });
 
-
+// function for dealing with questions as they get answered
 submitBtn.addEventListener("click", function(){
   if (userAnswer.value == answerText.toLowerCase()){
     getJservice()
@@ -74,15 +82,17 @@ submitBtn.addEventListener("click", function(){
   };
 });
 
+function removeTags(str) {
+  if ((str===null) || (str===''))
+      return false;
+  else
+      str = str.toString();
+        
+  // Regular expression to identify HTML tags in 
+  // the input string. Replacing the identified 
+  // HTML tag with a null string.
+  return str.replace( /(<([^>]+)>)/ig, '');
+}
+
 
 getQuote();
-
- //grabbing Modal as variable
-
- //when the answer is submitted, the modal opens
-
-function modalAppear() {
-
-//  modal.style.display = "block";
- }
-
