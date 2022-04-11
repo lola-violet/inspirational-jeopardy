@@ -4,7 +4,8 @@ var modal = document.getElementById("modal1")
 var submitBtn = document.getElementById("submit")
 var questionContainer = document.getElementById("questions")
 var playAgainBtn = document.getElementById("return")
-
+var resultPage = document.getElementById("resultpage")
+var questionCount = 0;
 
 function getJservice() {
   var requestUrl = "http://jservice.io/api/random";
@@ -19,8 +20,12 @@ function getJservice() {
       questionText.textContent = data[0].question;
       answerText.textContent = data[0].answer;
 
-      // document.body.appendChild(questionText);
       document.body.appendChild(answerText);
+      questionCount++;
+      if (questionCount > 5){
+        questionContainer.classList.add("hide");
+        resultPage.classList.remove("hide");
+      }
     });
 }
 
@@ -53,6 +58,9 @@ $("#start-quiz").on("click", function (){
   showQuiz();
 });
 
+
+
+
 getQuote();
 
  //grabbing Modal as variable
@@ -67,10 +75,3 @@ function modalAppear() {
  submitBtn.addEventListener("click", function(){
    modalAppear();
  });
-
-//  //when the user clicks outside of the modal, the modal closes
-//  window.onclick = function(event) {
-//    if (event.target !== modal) {
-//      modal.style.display = "none"
-//    }
-//  };
