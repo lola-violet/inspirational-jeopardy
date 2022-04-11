@@ -12,3 +12,30 @@
 header {
     margin-top: 0;
 }
+
+.grid-label {
+    background-color: darkblue;
+    margin: 20px;
+    min-height: 50px;
+}
+
+.grid-label h5 {
+    color: white;
+    text-align: center;
+}
+
+.grid {
+    background-color: darkblue;
+    margin: 20px;
+}
+
+.grid h5 {
+    color: gold;
+    text-align: center;
+}
+
+.custom-row {
+    margin: 10px;
+    padding: 0;
+
+}
