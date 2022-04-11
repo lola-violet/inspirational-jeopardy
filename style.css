@@ -1,9 +1,13 @@
 * {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     box-sizing: border-box;
 }
 
+body {
+    padding: 0;
+
+}
 
 .hide {
     visibility: hidden;
@@ -11,4 +15,11 @@
 
 header {
     margin-top: 0;
+    padding-top: 2%;
+    position: static;
+    background-color: teal;
+}
+h1 {
+    margin: 0 auto;
+    padding: 1%;
 }
