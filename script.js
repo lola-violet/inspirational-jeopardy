@@ -1,3 +1,11 @@
+var answerText = "";
+var questionText = document.getElementById("question1");
+var modal = document.getElementById("modal1")
+var submitBtn = document.getElementById("submit")
+var questionContainer = document.getElementById("questions")
+var playAgainBtn = document.getElementById("return")
+
+
 function getJservice() {
   var requestUrl = "http://jservice.io/api/random";
 
@@ -6,13 +14,12 @@ function getJservice() {
       return response.json();
     })
     .then(function (data) {
-      const questionText = document.createElement("h2");
-      const answerText = document.createElement("h4");
+      answerText = document.createElement("h4");
 
       questionText.textContent = data[0].question;
       answerText.textContent = data[0].answer;
 
-      document.body.appendChild(questionText);
+      // document.body.appendChild(questionText);
       document.body.appendChild(answerText);
     });
 }
@@ -37,28 +44,33 @@ function getQuote() {
     });
 }
 
-getJservice();
+function showQuiz(){
+  questionContainer.classList.remove("hide")
+}
+
+$("#start-quiz").on("click", function (){
+  getJservice();
+  showQuiz();
+});
 
 getQuote();
 
-
- //creating Modal 
- var modal = document.getElementById("myModal")
- var btn = document.getElementById("answer")
+ //grabbing Modal as variable
 
  //when the answer is submitted, the modal opens
 
- 
 function modalAppear() {
- document.querySelector("#myModal").classList.remove("hide")
- modal.style.display = "block";
+
+//  modal.style.display = "block";
  }
 
- btn.addEventListener("click", modalAppear);
+ submitBtn.addEventListener("click", function(){
+   modalAppear();
+ });
 
- //when the user clicks outside of the modal, the modal closes
- window.onclick = function(event) {
-   if (event.target == modal) {
-     modal.style.display = "none"
-   }
- };
+//  //when the user clicks outside of the modal, the modal closes
+//  window.onclick = function(event) {
+//    if (event.target !== modal) {
+//      modal.style.display = "none"
+//    }
+//  };
