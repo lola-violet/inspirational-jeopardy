@@ -1,7 +1,8 @@
 # inspirational-jeopardy
 UWBC Group Project #1
 
-##Elevator Pitch
+Elevator Pitch:
+
 Have you ever wanted to get better at Jeopardy? Do you dream of being a trivia whiz but find yourself losing motivation? Well we have the website for you! Checkout our Inspiration Jeopardy- where every question wrong gives you a delightful inspiration quote to cheer you on! 
  
 ## User Story
