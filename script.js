@@ -6,6 +6,8 @@ var questionContainer = document.getElementById("questions")
 var playAgainBtn = document.getElementById("return")
 var resultPage = document.getElementById("resultpage")
 var questionCount = 0;
+var parametersContainer = document.getElementById("parameters")
+var userAnswer = document.getElementById("textarea1")
 
 function getJservice() {
   var requestUrl = "http://jservice.io/api/random";
@@ -15,12 +17,11 @@ function getJservice() {
       return response.json();
     })
     .then(function (data) {
-      answerText = document.createElement("h4");
 
       questionText.textContent = data[0].question;
-      answerText.textContent = data[0].answer;
+      answerText = data[0].answer;
 
-      document.body.appendChild(answerText);
+      console.log(answerText)
       questionCount++;
       if (questionCount > 5){
         questionContainer.classList.add("hide");
@@ -28,6 +29,7 @@ function getJservice() {
       }
     });
 }
+
 
 function getQuote() {
   var requestUrl = "https://type.fit/api/quotes";
@@ -53,12 +55,24 @@ function showQuiz(){
   questionContainer.classList.remove("hide")
 }
 
+function hideParameters(){
+  parametersContainer.classList.add("hide")
+}
+
 $("#start-quiz").on("click", function (){
+  hideParameters();
   getJservice();
   showQuiz();
 });
 
 
+submitBtn.addEventListener("click", function(){
+  if (userAnswer.value == answerText.toLowerCase()){
+    getJservice()
+  } else {
+    // TODO: make the quote thing show up
+  };
+});
 
 
 getQuote();
@@ -72,6 +86,3 @@ function modalAppear() {
 //  modal.style.display = "block";
  }
 
- submitBtn.addEventListener("click", function(){
-   modalAppear();
- });
