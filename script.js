@@ -69,9 +69,11 @@ $("#start-quiz").on("click", function (){
 // function for dealing with questions as they get answered
 submitBtn.addEventListener("click", function(){
   if (userAnswer.value == answerText.toLowerCase()){
+    M.toast({html: 'Correct!!', classes: 'rounded'})
     getJservice()
   } else {
-    // TODO: make the quote thing show up
+    // make the quote thing show up
+    M.toast({html: 'Incorrect :(', classes: 'rounded'})
     hideQuiz();
     getQuote();
     showQuote();

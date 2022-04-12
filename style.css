@@ -70,3 +70,10 @@ h1 {
     padding: 0;
     line-height: normal;
 }
+
+#toast-container {
+    min-width: 10%;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
+}
