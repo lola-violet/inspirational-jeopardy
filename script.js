@@ -13,6 +13,10 @@ var questionCount = 0;
 
 
 // TODO: EVERYTHING RELATING TO PARAMETERS
+// TODO: generate 5 questions for each catagory
+// TODO: link boxes to the questions
+// TODO: WHEN question answered clear text in the box
+
 
 // function to pull a question and put it on the screen
 function getJservice() {
@@ -46,7 +50,7 @@ function getQuote() {
     })
     .then(function (data) {
       var randomNumber = Math.floor(Math.random() * 1643);
-// TODO: set this to show up in the quote block between questions
+// set this to show up in the quote block between questions
       console.log(data[randomNumber].text)
       quoteText.textContent = data[randomNumber].text;
       authorText.textContent = data[randomNumber].author;
@@ -118,4 +122,4 @@ function removeTags(str) {
   return str.replace( /(<([^>]+)>)/ig, '');
 }
 
-
+$('.dropdown-trigger').dropdown();
