@@ -45,7 +45,7 @@ h1 {
 .grid-label h5 {
     color: white;
     text-align: center;
-    padding:5%;
+    padding:10%;
     margin: 0;
     font-family: 'Anton', sans-serif;
 
@@ -59,7 +59,7 @@ h1 {
 .grid h5 {
     color: gold;
     text-align: center;
-    padding: 5%;
+    padding: 10%;
     margin: 0;
     font-family: 'Anton', sans-serif;
 
