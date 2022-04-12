@@ -1,3 +1,5 @@
+var quoteText = document.getElementById("myQuote");
+var authorText = document.getElementById("quoteAuthor");
 var answerText = "";
 var questionText = document.getElementById("question1");
 var modal = document.getElementById("modal1")
@@ -28,8 +30,8 @@ function getJservice() {
 
       console.log(answerText)
       questionCount++;
-      if (questionCount > 5){
-        questionContainer.classList.add("hide");
+      if (questionCount >= 5){
+        hideQuiz();
         resultPage.classList.remove("hide");
       }
     });
@@ -45,21 +47,12 @@ function getQuote() {
     .then(function (data) {
       var randomNumber = Math.floor(Math.random() * 1643);
 // TODO: set this to show up in the quote block between questions
-      const quoteText = document.createElement("h2");
-      const authorText = document.createElement("h4");
-
+      console.log(data[randomNumber].text)
       quoteText.textContent = data[randomNumber].text;
       authorText.textContent = data[randomNumber].author;
-
-      document.body.appendChild(quoteText);
-      document.body.appendChild(authorText);
     });
 }
 
-// function that hides shows the quiz
-function showQuiz(){
-  questionContainer.classList.remove("hide")
-}
 
 // function that hides the parameters
 function hideParameters(){
@@ -79,8 +72,37 @@ submitBtn.addEventListener("click", function(){
     getJservice()
   } else {
     // TODO: make the quote thing show up
+    hideQuiz();
+    getQuote();
+    showQuote();
   };
 });
+
+function wrongAnswer(){
+  getQuote();
+}
+
+
+
+// function that shows the quote
+function showQuote(){
+  quoteContainer.classList.remove("hide");
+}
+
+// function that hides shows the quote
+function hideQuote(){
+  quoteContainer.classList.add("hide");
+}
+
+// function that hides shows the quiz
+function showQuiz(){
+  questionContainer.classList.remove("hide");
+}
+
+// function that hides the quiz
+function hideQuiz(){
+  questionContainer.classList.add("hide");
+}
 
 function removeTags(str) {
   if ((str===null) || (str===''))
@@ -95,4 +117,3 @@ function removeTags(str) {
 }
 
 
-getQuote();
