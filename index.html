@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@200&display=swap" rel="stylesheet">
        <!-- Compiled and minified CSS -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
        <!-- Compiled and minified JavaScript -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
        <!-- <link rel="stylesheet" href="./reset.css"> -->
-    <link rel="stylesheet" href="./style.css">
+       <link rel="stylesheet" href="./style.css">
     <title>Inspirational Jeopardy</title>
 </head>
 <body>
@@ -81,35 +85,36 @@
     </div>
       
     <div id="question-grid">
+      <div class="flexbox">
       <div class="row custom-row" id="category-labels">
-        <div class="grid-label col s2"><h5>Category 1</h5></div>
-        <div class="grid-label col s2"><h5>Category 2</h5></div>
-        <div class="grid-label col s2"><h5>Category 3</h5></div>
+        <div class="grid-label col s3"><h5>Category 1</h5></div>
+        <div class="grid-label col s3"><h5>Category 2</h5></div>
+        <div class="grid-label col s3"><h5>Category 3</h5></div>
       </div>
       <div class="row custom-row" id="q200">
-        <div class="grid col s2"><h5>$200</h5></div>
-        <div class="grid col s2"><h5>$200</h5></div>
-        <div class="grid col s2"><h5>$200</h5></div>
+        <div class="grid col s3"><h5>$200</h5></div>
+        <div class="grid col s3"><h5>$200</h5></div>
+        <div class="grid col s3"><h5>$200</h5></div>
       </div>
       <div class="row custom-row" id="q400">
-        <div class="grid col s2"><h5>$400</h5></div>
-        <div class="grid col s2"><h5>$400</h5></div>
-        <div class="grid col s2"><h5>$400</h5></div>
+        <div class="grid col s3"><h5>$400</h5></div>
+        <div class="grid col s3"><h5>$400</h5></div>
+        <div class="grid col s3"><h5>$400</h5></div>
       </div>
       <div class="row custom-row" id="q600">
-        <div class="grid col s2"><h5>$600</h5></div>
-        <div class="grid col s2"><h5>$600</h5></div>
-        <div class="grid col s2"><h5>$600</h5></div>
+        <div class="grid col s3"><h5>$600</h5></div>
+        <div class="grid col s3"><h5>$600</h5></div>
+        <div class="grid col s3"><h5>$600</h5></div>
       </div>
       <div class="row custom-row" id="q800">
-        <div class="grid col s2"><h5>$800</h5></div>
-        <div class="grid col s2"><h5>$800</h5></div>
-        <div class="grid col s2"><h5>$800</h5></div>
+        <div class="grid col s3"><h5>$800</h5></div>
+        <div class="grid col s3"><h5>$800</h5></div>
+        <div class="grid col s3"><h5>$800</h5></div>
       </div>
       <div class="row custom-row" id="q1000">
-        <div class="grid col s2"><h5>$1000</h5></div>
-        <div class="grid col s2"><h5>$1000</h5></div>
-        <div class="grid col s2"><h5>$1000</h5></div>
+        <div class="grid col s3"><h5>$1000</h5></div>
+        <div class="grid col s3"><h5>$1000</h5></div>
+        <div class="grid col s3"><h5>$1000</h5></div>
       </div>
     </div>
 
@@ -127,7 +132,7 @@
           <a id="generateClues" class="btn waves-effect waves-light">I need a clue</a>
           <button id="submit" class="btn waves-effect waves-light myAnswers" type="submit">Submit Answer</button>
         </div>
-
+        
       </div>
     </div>
 
