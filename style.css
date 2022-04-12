@@ -25,12 +25,8 @@ h1 {
 }
 
 .flexbox {
-    display:flow-root;
-    float: none;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    left: 25%;
+    left: 10%;
 
 }
 .grid-label {
@@ -42,6 +38,7 @@ h1 {
 .grid-label h5 {
     color: white;
     text-align: center;
+    padding:5%;
 }
 
 .grid {
@@ -52,6 +49,7 @@ h1 {
 .grid h5 {
     color: gold;
     text-align: center;
+    padding: 5%;
 }
 
 .custom-row {
