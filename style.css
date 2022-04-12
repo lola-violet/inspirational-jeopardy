@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+/* font-family: 'Anton', sans-serif; */
+/* font-family: 'Jost', sans-serif; */
+
 body {
     padding: 0;
+    font-family: 'Jost', sans-serif;
 }
 
 .hide {
@@ -22,8 +26,12 @@ header {
 h1 {
     margin: 0 auto;
     padding: 1%;
+    font-family: 'Anton', sans-serif;
 }
 
+
+
+=======
 .flexbox {
     display:flow-root;
     float: none;
@@ -36,12 +44,14 @@ h1 {
 .grid-label {
     background-color: darkblue;
     margin: 20px;
-    min-height: 50px;
+    min-height: 100px;
 }
 
 .grid-label h5 {
     color: white;
     text-align: center;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
 }
 
 .grid {
@@ -52,9 +62,12 @@ h1 {
 .grid h5 {
     color: gold;
     text-align: center;
+    margin: 0;
+    font-family: 'Anton', sans-serif;
 }
 
 .custom-row {
     margin: 10px;
     padding: 0;
+    line-height: normal;
 }
