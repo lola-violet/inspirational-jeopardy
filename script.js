@@ -10,6 +10,7 @@ var resultPage = document.getElementById("resultpage")
 var parametersContainer = document.getElementById("parameters")
 var userAnswer = document.getElementById("textarea1")
 var questionCount = 0;
+var score = 0;
 
 
 // TODO: EVERYTHING RELATING TO PARAMETERS
