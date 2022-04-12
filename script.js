@@ -18,6 +18,8 @@ var threeLetterWords = 105;
 var people = 442;
 var category;
 var value;
+var score = 0;
+
 
 // TODO: EVERYTHING RELATING TO PARAMETERS
 // TODO: generate 5 questions for each category
