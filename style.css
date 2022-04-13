@@ -45,10 +45,16 @@ h3 {
     color: var(--headerText);
     letter-spacing: 5px;
 }
+/* .dropdown-trigger {
+    background-color: var(--bodyBg);
+} */
 
 #start-quiz {
     background-color: var(--button);
     border-radius: 10px;
+}
+.container {
+    border: white groove 3px;
 }
 
 .flexbox {
@@ -58,7 +64,7 @@ h3 {
 }
 .grid-label {
     background-color: darkblue;
-    margin: 20px;
+    margin: 4px;
     min-height: 100px;
     border-radius: 5px;
 }
@@ -67,27 +73,27 @@ h3 {
     color: white;
     text-align: center;
     padding:10%;
-    margin: 0px 10px;
+    margin: 0px !important;
     font-family: 'Anton', sans-serif;
     box-sizing: border-box;
 }
 
 .grid {
     background-color: darkblue;
-    margin: 20px;
+    margin: 4px;
     border-radius: 5px;
 }
 
 .grid h5 {
     color: gold;
     text-align: center;
-    padding: 10%;
-    margin: 0;
+    padding: 8%;
+    margin: 0 !important;
     font-family: 'Anton', sans-serif;
 }
 
 .custom-row {
-    margin: 0px 10px;
+    margin: 0px 0px;
     padding: 0;
     line-height: normal;
 }
@@ -97,6 +103,9 @@ h3 {
     margin-top: 20px;
     background-image: url('images/pj1-jeopardy-globe-crop.jpeg');
     border-radius: 10px;
+}
+#textarea1 {
+    color: yellow;
 }
 
 #toast-container {
@@ -109,4 +118,3 @@ h3 {
 .answered{
     color: darkblue !important;
 }
-=======
