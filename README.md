@@ -10,7 +10,7 @@ As a user
 I WANT to play a game of Jeopardy and 
 I WANT to be presented with inspiration if incorrect.
 
-## Acceptance Criteria
+## Acceptance Criteria / Description
 GIVEN a Jeopary Quiz
 WHEN I select categories from a dropdown
 THEN I can use a button to start the quiz.
@@ -24,3 +24,18 @@ WHEN the inspiration quote is presented
 THEN I can either chose to see more inspiration, or move on to the next question. 
 WHEN I have answered all questions 
 THEN I will get a final page where I see all my answers, correct or incorrect, with my score.
+
+## Link to GitHub Repo:
+https://github.com/lola-violet
+
+## Link to deployed site:
+https://lola-violet.github.io/inspirational-jeopardy/
+
+## Screenshots of Inspirational Jeopardy:
+
+## Effects not seen in above screenshots:
+
+## Summary:
+For this group project our project manager was Eric Taylor, our git administrator was Lola Applegate. 
+
+James Harding was our JavaScript and API guru. Eric took the lead on creating most of the HTML structure and delagating tasks on our Kanban board. Lola was our main stylists and created our external milestone sheet, and our Google Slides for our manatee tank. Dahlia was responsible for writing the ReadMe, setting up the score system, linking Materialize, and assisting with styling. 

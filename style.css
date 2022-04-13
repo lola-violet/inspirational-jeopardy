@@ -20,7 +20,7 @@ body {
 }
 
 .hide {
-    visibility: hidden;
+    visibility: none;
 }
 
 header {
@@ -84,7 +84,6 @@ h3 {
     padding: 10%;
     margin: 0;
     font-family: 'Anton', sans-serif;
-
 }
 
 .custom-row {
@@ -98,4 +97,11 @@ h3 {
     margin-top: 20px;
     background-image: url('images/pj1-jeopardy-globe-crop.jpeg');
     border-radius: 10px;
+}
+
+#toast-container {
+    min-width: 10%;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
 }

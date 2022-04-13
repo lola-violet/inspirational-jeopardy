@@ -26,10 +26,58 @@
       <div class="col s12 center-align">
 
         <div id="parameters">
-          <h3>Select your Categories</h3>
-          <select name="Category" id="category-quiz"></select>
+          <h3>Enter Parameters:</h3>
+
+          <!-- Dropdown Trigger for Category 1 -->
+          <a class="dropdown-trigger btn" href="#" data-target="category1">Choose your first category</a>
+          <!-- Dropdown Structure for Category 1 -->
+          <ul id="category1" class="dropdown-content">
+            <li><a href="#!" class="potpourriiii">Potpourriiii</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="stuipidAnswers">Stupid Answers</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="americanHistory">American History</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="animals">Animals</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="threeLetterWords">Three Letter Words</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="people">People</a></li>
+          </ul>
           <br>
-          <select name="Difficulty" id="select-difficult"></select>
+          <!-- Dropdown Trigger for Category 2 -->
+          <a class="dropdown-trigger btn" href="#" data-target="category2">Choose your second category</a>
+          <!-- Dropdown Structure for Category 2 -->
+          <ul id="category2" class="dropdown-content">
+            <li><a href="#!" class="potpourriiii">Potpourriiii</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="stuipidAnswers">Stupid Answers</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="americanHistory">American History</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="animals">Animals</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="threeLetterWords">Three Letter Words</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="people">People</a></li>
+          </ul>
+          <br>
+          <!-- Dropdown Trigger for Category 3 -->
+          <a class="dropdown-trigger btn" href="#" data-target="category3">Choose your third category</a>
+          <!-- Dropdown Structure for Category 1 -->
+          <ul id="category3" class="dropdown-content">
+            <li><a href="#!" class="potpourriiii">Potpourriiii</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="stuipidAnswers">Stupid Answers</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="americanHistory">American History</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="animals">Animals</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="threeLetterWords">Three Letter Words</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="people">People</a></li>
+          </ul>
           <br>
           <a id="start-quiz" class="btn-large">Generate Jeopardy!</a>
         </div>
@@ -37,36 +85,36 @@
       </div>
     </div>
       
-    <div class="row" id="question-grid">
-      <div class="flexbox row custom-row" id="category-labels">
-        <div class="grid-label col s3"><h5>Category 1</h5></div>
-        <div class="grid-label col s3"><h5>Category 2</h5></div>
-        <div class="grid-label col s3"><h5>Category 3</h5></div>
+    <div id="question-grid" class="flexbox hide">
+      <div class="row custom-row" id="category-labels">
+        <div class="grid-label col s3 category-1" id="category-display-1"><h5>Category 1</h5></div>
+        <div class="grid-label col s3 category-2" id="category-display-2"><h5>Category 2</h5></div>
+        <div class="grid-label col s3 category-3" id="category-display-3"><h5>Category 3</h5></div>
       </div>
-      <div class="flexbox row custom-row" id="q200">
-        <div class="grid col s3"><h5>$200</h5></div>
-        <div class="grid col s3"><h5>$200</h5></div>
-        <div class="grid col s3"><h5>$200</h5></div>
+      <div class="row custom-row question-row" id="q200" data-value="200">
+        <div class="grid col s3 category-1"><h5>$200</h5></div>
+        <div class="grid col s3 category-2"><h5>$200</h5></div>
+        <div class="grid col s3 category-3"><h5>$200</h5></div>
       </div>
-      <div class="flexbox row custom-row" id="q400">
-        <div class="grid col s3"><h5>$400</h5></div>
-        <div class="grid col s3"><h5>$400</h5></div>
-        <div class="grid col s3"><h5>$400</h5></div>
+      <div class="row custom-row question-row" id="q400" data-value="400">
+        <div class="grid col s3 category-1"><h5>$400</h5></div>
+        <div class="grid col s3 category-2"><h5>$400</h5></div>
+        <div class="grid col s3 category-3"><h5>$400</h5></div>
       </div>
-      <div class="flexbox row custom-row" id="q600">
-        <div class="grid col s3"><h5>$600</h5></div>
-        <div class="grid col s3"><h5>$600</h5></div>
-        <div class="grid col s3"><h5>$600</h5></div>
+      <div class="row custom-row question-row" id="q600" data-value="600">
+        <div class="grid col s3 category-1"><h5>$600</h5></div>
+        <div class="grid col s3 category-2"><h5>$600</h5></div>
+        <div class="grid col s3 category-3"><h5>$600</h5></div>
       </div>
-      <div class="flexbox row custom-row" id="q800">
-        <div class="grid col s3"><h5>$800</h5></div>
-        <div class="grid col s3"><h5>$800</h5></div>
-        <div class="grid col s3"><h5>$800</h5></div>
+      <div class="row custom-row question-row" id="q800" data-value="800">
+        <div class="grid col s3 category-1"><h5>$800</h5></div>
+        <div class="grid col s3 category-2"><h5>$800</h5></div>
+        <div class="grid col s3 category-3"><h5>$800</h5></div>
       </div>
-      <div class="flexbox row custom-row" id="q1000">
-        <div class="grid col s3"><h5>$1000</h5></div>
-        <div class="grid col s3"><h5>$1000</h5></div>
-        <div class="grid col s3"><h5>$1000</h5></div>
+      <div class="row custom-row question-row" id="q1000" data-value="1000">
+        <div class="grid col s3 category-1"><h5>$1000</h5></div>
+        <div class="grid col s3 category-2"><h5>$1000</h5></div>
+        <div class="grid col s3 category-3"><h5>$1000</h5></div>
       </div>
     </div>
 
@@ -124,11 +172,11 @@
     </div>
 
   </div>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>
