@@ -136,11 +136,29 @@ h1 {
     background-image: url('images/pj1-jeopardy-globe-crop.jpeg');
     border-radius: 10px;
 }
+
 #textarea1 {
-    color: yellow;
+    color: rgb(121, 233, 253);
+    margin-top: 20px;
+    width: 800px;
 }
+
+
+
 #question1 {
     color:white;
+    font-size: 230%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+#quoteContainer {
+    color: white;
+    font-size: 230%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #toast-container {
@@ -156,7 +174,6 @@ h1 {
 
 #myQuote {
     font-style: italic;
-
 }
 
 #generateClues:hover,
