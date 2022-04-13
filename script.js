@@ -59,12 +59,18 @@ function getJservice() {
       return response.json();
     })
     .then(function (data) {
-      questionText.textContent = data[0].question;
-      var answerTemp = removeTags(data[0].answer);
-      answerText = answerTemp.replace(/&/, "and");
-      console.log(answerText);
-      showQuiz();
-      hideGrid();
+      if (!data.invalid_count){
+        randomQuestionNumber = Math.floor(Math.random() * data.length)
+        questionText.textContent = data[randomQuestionNumber].question;
+        var answerTemp = removeTags(data[randomQuestionNumber].answer);
+        answerText = answerTemp.replace(/&/, "and");
+        console.log(answerText);
+        showQuiz();
+        hideGrid();
+      } else {
+        console.log("invalid question rerolling")
+        getJservice();
+      }
     });
 }
 
@@ -94,7 +100,6 @@ function hideParameters() {
 // function that runs the quiz for the first question
 $("#start-quiz").on("click", function () {
   hideParameters();
-  getJservice();
   showGrid();
 });
 
