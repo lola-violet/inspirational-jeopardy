@@ -51,7 +51,7 @@ $(".question-row")
 
 function getJservice() {
   var requestUrl =
-    "http://jservice.io/api/clues?category=" + category + "&value=" + value;
+    "https://jservice.io/api/clues?category=" + category + "&value=" + value;
 
   fetch(requestUrl)
     .then(function (response) {
@@ -113,6 +113,8 @@ $("#start-quiz").on("click", function () {
 // function for dealing with questions as they get answered
 submitBtn.addEventListener("click", function () {
   if (userAnswer.value == answerText.toLowerCase()) {
+    score += data-value;
+    console.log(score);
     M.toast({ html: "Correct!!", classes: "rounded" });
     getJservice();
   } else {
@@ -260,3 +262,7 @@ $("#category3")
       });
     }
   });
+
+  function scorePage () {
+    $("#finalize").textContent = "Final Score is" + score + "!";
+  }
