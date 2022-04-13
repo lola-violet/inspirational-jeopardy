@@ -6,10 +6,18 @@
 
 /* font-family: 'Anton', sans-serif; */
 /* font-family: 'Jost', sans-serif; */
+:root {
+    --dark: #4a148c;
+    --headerText: #f2fcfd;
+    --lightish: #7c4dff;
+    --button: #f50057;
+    --buttonHov: #f65b91;
+}
 
 body {
     padding: 0;
     font-family: 'Jost', sans-serif;
+    background-color: black;
 }
 
 .hide {
@@ -18,9 +26,12 @@ body {
 
 header {
     margin-top: 0;
-    padding-top: 2%;
+    padding-top: 3%;
+    padding-bottom: 2%;
     position: static;
-    background-color: teal;
+    background-image: url('images/pj1-jeopardy-background.jpeg');
+    color: var(--headerText);
+    letter-spacing: 20px;
 }
 
 h1 {
@@ -29,44 +40,125 @@ h1 {
     font-family: 'Anton', sans-serif;
 }
 
+.custom-head {
+    font-family: 'Anton', sans-serif;
+    font-weight: 100;
+    color: var(--headerText);
+    letter-spacing: 5px;
+}
 
+.custom-drop {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 20px !important;
+    background-color: var(--lightish);
+}
+
+.custom-drop:hover {
+    background-color: var(--dark);
+    cursor: pointer;
+}
+
+.custom-drop:focus {
+    background-color: var(--dark);
+}
+
+.custom-list li a {
+    color: darkblue;
+    text-align: center;
+}
+
+#start-quiz {
+    background-color: var(--button);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px !important;
+}
+.container {
+    border: white groove 3px;
+}
 
 .flexbox {
     position: relative;
     left: 10%;
-
 }
+
 .grid-label {
     background-color: darkblue;
-    margin: 20px;
+    margin: 4px 6px;
     min-height: 100px;
+    border-radius: 5px;
+}
+
+.grid-label:hover {
+    cursor: default;
 }
 
 .grid-label h5 {
     color: white;
     text-align: center;
     padding:10%;
-    margin: 0;
+    margin: 0px !important;
     font-family: 'Anton', sans-serif;
+    box-sizing: border-box;
 }
 
 .grid {
     background-color: darkblue;
-    margin: 20px;
+    margin: 4px 6px;
+    border-radius: 5px;
+}
+
+.grid:hover {
+    cursor: pointer;
+    background-color: rgb(26, 26, 189);
 }
 
 .grid h5 {
     color: gold;
     text-align: center;
-    padding: 10%;
-    margin: 0;
+    padding: 8%;
+    margin: 0 !important;
     font-family: 'Anton', sans-serif;
 }
 
 .custom-row {
-    margin: 10px;
+    margin: 0px 0px;
     padding: 0;
     line-height: normal;
+}
+
+#parameters {
+    padding: 20px;
+    margin-top: 20px;
+    background-image: url('images/pj1-jeopardy-globe-crop.jpeg');
+    border-radius: 10px;
+}
+
+#textarea1 {
+    color: rgb(121, 233, 253);
+    margin-top: 20px;
+    width: 800px;
+}
+
+
+
+#question1 {
+    color:white;
+    font-size: 230%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+#quoteContainer {
+    color: white;
+    font-size: 230%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #toast-container {
@@ -74,4 +166,22 @@ h1 {
     top: 50%;
     right: 50%;
     transform: translateX(50%) translateY(50%);
+}
+
+.answered{
+    color: darkblue !important;
+}
+
+#myQuote {
+    font-style: italic;
+}
+
+#generateClues:hover,
+#generateClues:after {
+    background-color: var(--buttonHov);
+}
+
+#submit:hover,
+#sumbit:after {
+    background-color: var(--dark);
 }

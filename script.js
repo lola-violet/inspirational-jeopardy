@@ -34,16 +34,28 @@ $(".question-row")
     value = $(this).parent().attr("data-value");
     if ($(this).hasClass("animals")) {
       category = animals;
+      $(this).removeClass("animals");
+      $(this).children().addClass("answered");
     } else if ($(this).hasClass("potpourriiii")) {
       category = potpourriiii;
+      $(this).removeClass("potpourriiii");
+      $(this).children().addClass("answered");
     } else if ($(this).hasClass("americanHistory")) {
       category = americanHistory;
+      $(this).removeClass("americanHistory");
+      $(this).children().addClass("answered");
     } else if ($(this).hasClass("threeLetterWords")) {
       category = threeLetterWords;
+      $(this).removeClass("threeLetterWords");
+      $(this).children().addClass("answered");
     } else if ($(this).hasClass("people")) {
       category = people;
+      $(this).removeClass("people");
+      $(this).children().addClass("answered");
     } else if ($(this).hasClass("stupidAnswers")) {
       category = stupidAnswers;
+      $(this).removeClass("stupidAnswers");
+      $(this).children().addClass("answered");
     } else {
       return;
     }
