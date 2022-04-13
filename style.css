@@ -75,3 +75,7 @@ h1 {
     right: 50%;
     transform: translateX(50%) translateY(50%);
 }
+
+.answered{
+    color: darkblue !important;
+}
