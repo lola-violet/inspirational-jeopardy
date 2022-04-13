@@ -121,11 +121,14 @@ submitBtn.addEventListener("click", function () {
     score += value;
     console.log(score);
     M.toast({ html: "Correct!!", classes: "rounded" });
-    showQuiz();
+    userAnswer.value = "";
+    showGrid();
+    hideQuiz();
   } else {
     // make the quote thing show up
     M.toast({ html: "Incorrect :(", classes: "rounded" });
     hideQuiz();
+    userAnswer.value = "";
     getQuote();
     showQuote();
   }
