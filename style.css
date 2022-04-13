@@ -6,10 +6,17 @@
 
 /* font-family: 'Anton', sans-serif; */
 /* font-family: 'Jost', sans-serif; */
+:root {
+    --dark: #4a148c;
+    --headerText: #e0f7fa;
+    --bodyBg: #7c4dff;
+    --button: #f50057;
+}
 
 body {
     padding: 0;
     font-family: 'Jost', sans-serif;
+    background-color: black;
 }
 
 .hide {
@@ -18,9 +25,12 @@ body {
 
 header {
     margin-top: 0;
-    padding-top: 2%;
+    padding-top: 3%;
+    padding-bottom: 2%;
     position: static;
-    background-color: teal;
+    background-image: url('images/pj1-jeopardy-background.jpeg');
+    color: var(--headerText);
+    letter-spacing: 20px;
 }
 
 h1 {
@@ -29,7 +39,17 @@ h1 {
     font-family: 'Anton', sans-serif;
 }
 
+h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 100;
+    color: var(--headerText);
+    letter-spacing: 5px;
+}
 
+#start-quiz {
+    background-color: var(--button);
+    border-radius: 10px;
+}
 
 .flexbox {
     position: relative;
@@ -40,20 +60,22 @@ h1 {
     background-color: darkblue;
     margin: 20px;
     min-height: 100px;
+    border-radius: 5px;
 }
 
 .grid-label h5 {
     color: white;
     text-align: center;
     padding:10%;
-    margin: 0;
+    margin: 0px 10px;
     font-family: 'Anton', sans-serif;
-
+    box-sizing: border-box;
 }
 
 .grid {
     background-color: darkblue;
     margin: 20px;
+    border-radius: 5px;
 }
 
 .grid h5 {
@@ -66,7 +88,14 @@ h1 {
 }
 
 .custom-row {
-    margin: 10px;
+    margin: 0px 10px;
     padding: 0;
     line-height: normal;
+}
+
+#parameters {
+    padding: 20px;
+    margin-top: 20px;
+    background-image: url('images/pj1-jeopardy-globe-crop.jpeg');
+    border-radius: 10px;
 }
