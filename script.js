@@ -10,6 +10,7 @@ var resultPage = document.getElementById("resultpage");
 var parametersContainer = document.getElementById("parameters");
 var userAnswer = document.getElementById("textarea1");
 var categoryRow = document.getElementById("category-labels");
+var questionGrid = document.getElementById('question-grid')
 var potpourriiii = 306;
 var stupidAnswers = 136;
 var americanHistory = 780;
@@ -62,25 +63,10 @@ function getJservice() {
       var answerTemp = removeTags(data[0].answer);
       answerText = answerTemp.replace(/&/, "and");
       console.log(answerText);
+      showQuiz();
+      hideGrid();
     });
 }
-
-// function getJservice() {
-//   var requestUrl = "http://jservice.io/api/random";
-
-//   fetch(requestUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-
-//       questionText.textContent = data[0].question;
-//       var answerTemp =  removeTags(data[0].answer);
-//       answerText = answerTemp.replace(/&/, "and")
-
-//       console.log(answerText)
-//     });
-// }
 
 // function to pull quotes
 function getQuote() {
@@ -95,6 +81,8 @@ function getQuote() {
       console.log(data[randomNumber].text);
       quoteText.textContent = data[randomNumber].text;
       authorText.textContent = data[randomNumber].author;
+      showQuote();
+      hideQuiz();
     });
 }
 
@@ -107,7 +95,7 @@ function hideParameters() {
 $("#start-quiz").on("click", function () {
   hideParameters();
   getJservice();
-  showQuiz();
+  showGrid();
 });
 
 // function for dealing with questions as they get answered
@@ -116,7 +104,7 @@ submitBtn.addEventListener("click", function () {
     score += data-value;
     console.log(score);
     M.toast({ html: "Correct!!", classes: "rounded" });
-    getJservice();
+    showQuiz();
   } else {
     // make the quote thing show up
     M.toast({ html: "Incorrect :(", classes: "rounded" });
@@ -125,6 +113,15 @@ submitBtn.addEventListener("click", function () {
     showQuote();
   }
 });
+
+$("#moreQuotes").on("click", function(){
+  getQuote();
+})
+
+$("#nextQuestion").on("click", function(){
+  hideQuote();
+  showGrid();
+})
 
 function wrongAnswer() {
   getQuote();
@@ -143,6 +140,16 @@ function hideQuote() {
 // function that hides shows the quiz
 function showQuiz() {
   questionContainer.classList.remove("hide");
+}
+
+// function that hides shows the quiz
+function showGrid() {
+  questionGrid.classList.remove("hide");
+}
+
+// function that hides shows the quiz
+function hideGrid() {
+  questionGrid.classList.add("hide");
 }
 
 // function that hides the quiz

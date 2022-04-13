@@ -13,7 +13,7 @@ body {
 }
 
 .hide {
-    visibility: hidden;
+    visibility: none;
 }
 
 header {
