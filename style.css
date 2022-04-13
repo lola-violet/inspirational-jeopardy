@@ -139,6 +139,9 @@ h1 {
 #textarea1 {
     color: yellow;
 }
+#question1 {
+    color:white;
+}
 
 #toast-container {
     min-width: 10%;
