@@ -8,9 +8,10 @@
 /* font-family: 'Jost', sans-serif; */
 :root {
     --dark: #4a148c;
-    --headerText: #e0f7fa;
-    --bodyBg: #7c4dff;
+    --headerText: #f2fcfd;
+    --lightish: #7c4dff;
     --button: #f50057;
+    --buttonHov: #f65b91;
 }
 
 body {
@@ -39,19 +40,41 @@ h1 {
     font-family: 'Anton', sans-serif;
 }
 
-h3 {
+.custom-head {
     font-family: 'Anton', sans-serif;
     font-weight: 100;
     color: var(--headerText);
     letter-spacing: 5px;
 }
-/* .dropdown-trigger {
-    background-color: var(--bodyBg);
-} */
+
+.custom-drop {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 20px !important;
+    background-color: var(--lightish);
+}
+
+.custom-drop:hover {
+    background-color: var(--dark);
+    cursor: pointer;
+}
+
+.custom-drop:focus {
+    background-color: var(--dark);
+}
+
+.custom-list li a {
+    color: darkblue;
+    text-align: center;
+}
 
 #start-quiz {
     background-color: var(--button);
     border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px !important;
 }
 .container {
     border: white groove 3px;
@@ -60,13 +83,17 @@ h3 {
 .flexbox {
     position: relative;
     left: 10%;
-
 }
+
 .grid-label {
     background-color: darkblue;
-    margin: 4px;
+    margin: 4px 6px;
     min-height: 100px;
     border-radius: 5px;
+}
+
+.grid-label:hover {
+    cursor: default;
 }
 
 .grid-label h5 {
@@ -80,8 +107,13 @@ h3 {
 
 .grid {
     background-color: darkblue;
-    margin: 4px;
+    margin: 4px 6px;
     border-radius: 5px;
+}
+
+.grid:hover {
+    cursor: pointer;
+    background-color: rgb(26, 26, 189);
 }
 
 .grid h5 {
@@ -117,4 +149,19 @@ h3 {
 
 .answered{
     color: darkblue !important;
+}
+
+#myQuote {
+    font-style: italic;
+
+}
+
+#generateClues:hover,
+#generateClues:after {
+    background-color: var(--buttonHov);
+}
+
+#submit:hover,
+#sumbit:after {
+    background-color: var(--dark);
 }
