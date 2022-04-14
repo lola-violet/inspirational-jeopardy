@@ -298,10 +298,8 @@ $("#category3")
   });
 
   function scorePage () {
-<<<<<<< HEAD
     $("#finalize").textContent = "Final Score is" + score + "!";
-=======
-    showFinal();
-    $("#finalize").textContent = "Final Score is $" + score + "!";
->>>>>>> dev
   }
+
+  var audio = document.getElementById('audio')
+  audio.volume = 0.2;

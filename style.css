@@ -193,6 +193,7 @@ h1 {
     background-color: black;
 }
 
-#widget {
-    background-color: black;
+#audio {
+    display: flex;
+    justify-content: center;
 }
