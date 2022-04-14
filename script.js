@@ -20,20 +20,12 @@ var people = 442;
 var category;
 var value;
 var score = 0;
+var pastScores = [];
 
-<<<<<<< HEAD
-
-
-// TODO: EVERYTHING RELATING TO PARAMETERS
-// TODO: generate 5 questions for each category
-// TODO: link boxes to the questions
-// TODO: WHEN question answered clear text in the box
-=======
 // Click listener for header to reload page
 $("#jeopardyHeader").on("click", function(event) {
   location.reload();
 })
->>>>>>> dev
 
 // function to pull a question and put it on the screen
 $(".question-row")
@@ -126,7 +118,7 @@ $("#start-quiz").on("click", function () {
 });
 
 var x=0;
-// function for dealing with questions as they get answered
+// function for dealing with questions as they get answered, ends game
 submitBtn.addEventListener("click", function () {
  x++;
  if (x===15){
@@ -136,6 +128,7 @@ submitBtn.addEventListener("click", function () {
   hideQuiz();
   return
 }
+// makes any text input to lowercase to match with answer
   if (userAnswer.value.toLowerCase() == answerText.toLowerCase()) {
     value = parseInt(value);
     score = score + value;
@@ -269,7 +262,11 @@ $("#category3")
       });
     }
   });
-  var pastScores = [];
+  // starts the game over
+$("#return").on("click",function(){
+  location.reload();
+})
+// Brings up the score page once the game is finished
   function scorePage () {
     showFinal();
     $("#finalize").text("Final Score is $" + score + "!");
@@ -278,7 +275,7 @@ $("#category3")
     console.log(pastScores);
     getScore();
   }
-<<<<<<< HEAD
+  // Displays past scores
   function getScore(){
     var storedScores = JSON.parse(localStorage.getItem("pastScores"));
     if (storedScores){
@@ -335,7 +332,4 @@ function removeTags(str) {
   // HTML tag with a null string.
   return str.replace(/(<([^>]+)>)/gi, "");
 }
-=======
-
->>>>>>> dev
 
