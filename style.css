@@ -12,6 +12,8 @@
     --lightish: #7c4dff;
     --button: #f50057;
     --buttonHov: #f65b91;
+    --quote: #f998ba;
+    --author: #f65b91;
 }
 
 body {
@@ -32,6 +34,10 @@ header {
     background-image: url('images/pj1-jeopardy-background.jpeg');
     color: var(--headerText);
     letter-spacing: 20px;
+}
+
+header:hover {
+    cursor: pointer;
 }
 
 h1 {
@@ -153,12 +159,15 @@ h1 {
 }
 
 
-
 #quoteContainer {
     color: white;
     font-size: 230%;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+#correctAnswerDisplay {
+    min-height: fit-content;
 }
 
 #toast-container {
@@ -174,6 +183,12 @@ h1 {
 
 #myQuote {
     font-style: italic;
+    color: var(--quote);
+}
+
+#quoteAuthor {
+    color: var(--author);
+    font-size: 28px;
 }
 #resultpage {
     color:white;
@@ -187,4 +202,12 @@ h1 {
 #submit:hover,
 #sumbit:after {
     background-color: var(--dark);
+}
+
+.privacyPolicy{
+    background-color: black;
+}
+
+#widget {
+    background-color: black;
 }

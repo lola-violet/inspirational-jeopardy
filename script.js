@@ -21,12 +21,19 @@ var category;
 var value;
 var score = 0;
 
+<<<<<<< HEAD
 
 
 // TODO: EVERYTHING RELATING TO PARAMETERS
 // TODO: generate 5 questions for each category
 // TODO: link boxes to the questions
 // TODO: WHEN question answered clear text in the box
+=======
+// Click listener for header to reload page
+$("#jeopardyHeader").on("click", function(event) {
+  location.reload();
+})
+>>>>>>> dev
 
 // function to pull a question and put it on the screen
 $(".question-row")
@@ -72,11 +79,13 @@ function getJservice() {
       return response.json();
     })
     .then(function (data) {
-      if (!data.invalid_count){
+      if (data.invalid_count == undefined){
+        console.log(data.invalid_count)
         randomQuestionNumber = Math.floor(Math.random() * data.length)
         questionText.textContent = data[randomQuestionNumber].question;
         var answerTemp = removeTags(data[randomQuestionNumber].answer);
         answerText = answerTemp.replace(/&/, "and");
+        $("#correctAnswerDisplay").text("Correct Answer: " + answerText.charAt(0).toUpperCase() + answerText.slice(1));
         console.log(answerText);
         showQuiz();
         hideGrid();
@@ -131,13 +140,13 @@ submitBtn.addEventListener("click", function () {
     value = parseInt(value);
     score = score + value;
     console.log(score);
-    M.toast({ html: "Correct!!", classes: "rounded" });
+    M.toast({ html: `Correct!! +$${value}`, classes: "rounded", displayLength: 1000});
     userAnswer.value = "";
     showGrid();
     hideQuiz();
   } else {
     // make the quote thing show up
-    M.toast({ html: "Incorrect :(", classes: "rounded" });
+    M.toast({ html: "Incorrect :(", classes: "rounded", displayLength: 1000});
     hideQuiz();
     userAnswer.value = "";
     getQuote();
@@ -269,6 +278,7 @@ $("#category3")
     console.log(pastScores);
     getScore();
   }
+<<<<<<< HEAD
   function getScore(){
     var storedScores = JSON.parse(localStorage.getItem("pastScores"));
     if (storedScores){
@@ -325,4 +335,7 @@ function removeTags(str) {
   // HTML tag with a null string.
   return str.replace(/(<([^>]+)>)/gi, "");
 }
+=======
+
+>>>>>>> dev
 
