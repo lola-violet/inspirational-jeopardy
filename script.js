@@ -25,11 +25,9 @@ var pastScores = [];
 // Click listener for header to reload page
 $("#jeopardyHeader").on("click", function(event) {
   location.reload();
-<<<<<<< HEAD
-})
-=======
+
 });
->>>>>>> dev
+
 
 // function to pull a question and put it on the screen
 $(".question-row")
@@ -279,13 +277,13 @@ $("#return").on("click",function(){
     console.log(pastScores);
     getScore();
   }
-<<<<<<< HEAD
+
   // Displays past scores
-=======
->>>>>>> dev
   function getScore(){
     var storedScores = JSON.parse(localStorage.getItem("pastScores"));
     if (storedScores){
+      var scoreListLabel = $("#scoreListLabel");
+      scoreListLabel.text("Previous Scores:");
       for(i=0;i<storedScores.length;i++){
         var pastScoresList = $("#pastScoresList");
         var pastScoresListItem = document.createElement("li");
