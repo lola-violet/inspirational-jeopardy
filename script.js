@@ -118,14 +118,17 @@ $("#start-quiz").on("click", function () {
 // function for dealing with questions as they get answered
 submitBtn.addEventListener("click", function () {
   if (userAnswer.value == answerText.toLowerCase()) {
-    score += data-value;
+    score += value;
     console.log(score);
     M.toast({ html: "Correct!!", classes: "rounded" });
-    showQuiz();
+    userAnswer.value = "";
+    showGrid();
+    hideQuiz();
   } else {
     // make the quote thing show up
     M.toast({ html: "Incorrect :(", classes: "rounded" });
     hideQuiz();
+    userAnswer.value = "";
     getQuote();
     showQuote();
   }
