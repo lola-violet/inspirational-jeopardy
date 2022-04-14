@@ -157,12 +157,15 @@ h1 {
 }
 
 
-
 #quoteContainer {
     color: white;
     font-size: 230%;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+#correctAnswerDisplay {
+    min-height: fit-content;
 }
 
 #toast-container {
