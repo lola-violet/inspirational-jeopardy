@@ -21,14 +21,6 @@ var category;
 var value;
 var score = 0;
 
-<<<<<<< HEAD
-
-
-// TODO: EVERYTHING RELATING TO PARAMETERS
-// TODO: generate 5 questions for each category
-// TODO: link boxes to the questions
-// TODO: WHEN question answered clear text in the box
-=======
 // Click listener for header to reload page
 $("#jeopardyHeader").on("click", function(event) {
   location.reload();
