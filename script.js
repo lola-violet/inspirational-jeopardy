@@ -117,17 +117,31 @@ $("#start-quiz").on("click", function () {
 
 // function for dealing with questions as they get answered
 submitBtn.addEventListener("click", function () {
-  if (userAnswer.value == answerText.toLowerCase()) {
-    score += data-value;
+  if (userAnswer.value.toLowerCase() == answerText.toLowerCase()) {
+    value = parseInt(value);
+    score = score + value;
     console.log(score);
     M.toast({ html: "Correct!!", classes: "rounded" });
-    showQuiz();
+    userAnswer.value = "";
+    showGrid();
+    hideQuiz();
   } else {
     // make the quote thing show up
     M.toast({ html: "Incorrect :(", classes: "rounded" });
     hideQuiz();
+    userAnswer.value = "";
     getQuote();
     showQuote();
+  } console.log($(".question-row").children());
+  var questionBox = $(".question-row").children();
+  // The below for loop is intended to have the game stop after each questionBox has class of answered. Doesn't work yet.
+  for(i=0;i < questionBox.length; i++){
+    if (!questionBox[i].classList.contains("answered")) {
+      console.log("see");
+    } else {
+      console.log("test");
+      scorePage();
+    }
   }
 });
 
@@ -289,4 +303,9 @@ $("#category3")
 
   function scorePage () {
     $("#finalize").textContent = "Final Score is" + score + "!";
+<<<<<<< HEAD
   }
+=======
+
+  }
+>>>>>>> dev
