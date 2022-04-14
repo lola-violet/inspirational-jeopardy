@@ -185,3 +185,11 @@ h1 {
 #sumbit:after {
     background-color: var(--dark);
 }
+
+.privacyPolicy{
+    background-color: black;
+}
+
+#widget {
+    background-color: black;
+}
