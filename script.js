@@ -111,8 +111,10 @@ $("#start-quiz").on("click", function () {
   showGrid();
 });
 
+var x=0;
 // function for dealing with questions as they get answered
 submitBtn.addEventListener("click", function () {
+ x++;
   if (userAnswer.value.toLowerCase() == answerText.toLowerCase()) {
     value = parseInt(value);
     score = score + value;
@@ -129,15 +131,9 @@ submitBtn.addEventListener("click", function () {
     getQuote();
     showQuote();
   } console.log($(".question-row").children());
-  var questionBox = $(".question-row").children();
-  // The below for loop is intended to have the game stop after each questionBox has class of answered. Doesn't work yet.
-  for(i=0;i < questionBox.length; i++){
-    if (!questionBox[i].classList.contains("answered")) {
-      console.log("see");
-    } else {
-      console.log("test");
-      scorePage();
-    }
+  if (x===15){
+    console.log("all answered");
+    scorePage();
   }
 });
 
@@ -182,6 +178,10 @@ function hideGrid() {
 // function that hides the quiz
 function hideQuiz() {
   questionContainer.classList.add("hide");
+}
+// function that shows resultspage 
+function showFinal(){
+  $("#resultpage").removeClass("hide");
 }
 
 function removeTags(str) {
@@ -298,5 +298,6 @@ $("#category3")
   });
 
   function scorePage () {
-    $("#finalize").textContent = "Final Score is" + score + "!";
+    showFinal();
+    $("#finalize").textContent = "Final Score is $" + score + "!";
   }
