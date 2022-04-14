@@ -33,7 +33,15 @@ https://lola-violet.github.io/inspirational-jeopardy/
 
 ## Screenshots of Inspirational Jeopardy:
 
+
 ## Effects not seen in above screenshots:
+- Most of our styling is from Materialize
+- All buttons have hover effects
+- The category buttons are dropdowns
+- Answered question boxes become empty
+- Toasts pop up when answer is incorrect & correst. Correct answer will have + the amount added to score
+- Players score is being logged into the console and additional points are being added to it as they answer questions.
+
 
 ## Summary:
 For this group project our project manager was Eric Taylor, our git administrator was Lola Applegate. 
