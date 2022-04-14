@@ -175,6 +175,9 @@ h1 {
 #myQuote {
     font-style: italic;
 }
+#resultpage {
+    color:white;
+}
 
 #generateClues:hover,
 #generateClues:after {
