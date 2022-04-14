@@ -25,7 +25,7 @@ var score = 0;
 $("#jeopardyHeader").on("click", function(event) {
   location.reload();
 })
->>>>>>> dev
+
 
 // function to pull a question and put it on the screen
 $(".question-row")
@@ -270,10 +270,11 @@ $("#category3")
     console.log(pastScores);
     getScore();
   }
-<<<<<<< HEAD
   function getScore(){
     var storedScores = JSON.parse(localStorage.getItem("pastScores"));
     if (storedScores){
+      var scoreListLabel = $("#scoreListLabel");
+      scoreListLabel.text("Previous Scores:");
       for(i=0;i<storedScores.length;i++){
         var pastScoresList = $("#pastScoresList");
         var pastScoresListItem = document.createElement("li");
@@ -327,7 +328,4 @@ function removeTags(str) {
   // HTML tag with a null string.
   return str.replace(/(<([^>]+)>)/gi, "");
 }
-=======
-
->>>>>>> dev
 
