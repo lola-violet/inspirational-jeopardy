@@ -303,9 +303,4 @@ $("#category3")
 
   function scorePage () {
     $("#finalize").textContent = "Final Score is" + score + "!";
-<<<<<<< HEAD
   }
-=======
-
-  }
->>>>>>> dev
