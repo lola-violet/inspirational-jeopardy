@@ -21,12 +21,6 @@ var category;
 var value;
 var score = 0;
 
-
-// TODO: EVERYTHING RELATING TO PARAMETERS
-// TODO: generate 5 questions for each category
-// TODO: link boxes to the questions
-// TODO: WHEN question answered clear text in the box
-
 // function to pull a question and put it on the screen
 $(".question-row")
   .children()
@@ -71,11 +65,13 @@ function getJservice() {
       return response.json();
     })
     .then(function (data) {
-      if (!data.invalid_count){
+      if (data.invalid_count == undefined){
+        console.log(data.invalid_count)
         randomQuestionNumber = Math.floor(Math.random() * data.length)
         questionText.textContent = data[randomQuestionNumber].question;
         var answerTemp = removeTags(data[randomQuestionNumber].answer);
         answerText = answerTemp.replace(/&/, "and");
+        $("#correctAnswerDisplay").text("Correct Answer: " + answerText.charAt(0).toUpperCase() + answerText.slice(1));
         console.log(answerText);
         showQuiz();
         hideGrid();
@@ -115,33 +111,29 @@ $("#start-quiz").on("click", function () {
   showGrid();
 });
 
+var x=0;
 // function for dealing with questions as they get answered
 submitBtn.addEventListener("click", function () {
+ x++;
   if (userAnswer.value.toLowerCase() == answerText.toLowerCase()) {
     value = parseInt(value);
     score = score + value;
     console.log(score);
-    M.toast({ html: "Correct!!", classes: "rounded" });
+    M.toast({ html: `Correct!! +$${value}`, classes: "rounded", displayLength: 1000});
     userAnswer.value = "";
     showGrid();
     hideQuiz();
   } else {
     // make the quote thing show up
-    M.toast({ html: "Incorrect :(", classes: "rounded" });
+    M.toast({ html: "Incorrect :(", classes: "rounded", displayLength: 1000});
     hideQuiz();
     userAnswer.value = "";
     getQuote();
     showQuote();
   } console.log($(".question-row").children());
-  var questionBox = $(".question-row").children();
-  // The below for loop is intended to have the game stop after each questionBox has class of answered. Doesn't work yet.
-  for(i=0;i < questionBox.length; i++){
-    if (!questionBox[i].classList.contains("answered")) {
-      console.log("see");
-    } else {
-      console.log("test");
-      scorePage();
-    }
+  if (x===15){
+    console.log("all answered");
+    scorePage();
   }
 });
 
@@ -186,6 +178,10 @@ function hideGrid() {
 // function that hides the quiz
 function hideQuiz() {
   questionContainer.classList.add("hide");
+}
+// function that shows resultspage 
+function showFinal(){
+  $("#resultpage").removeClass("hide");
 }
 
 function removeTags(str) {
@@ -302,5 +298,10 @@ $("#category3")
   });
 
   function scorePage () {
+<<<<<<< HEAD
     $("#finalize").textContent = "Final Score is" + score + "!";
+=======
+    showFinal();
+    $("#finalize").textContent = "Final Score is $" + score + "!";
+>>>>>>> dev
   }
