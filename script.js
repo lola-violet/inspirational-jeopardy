@@ -25,6 +25,7 @@ var score = 0;
 $("#jeopardyHeader").on("click", function(event) {
   location.reload();
 })
+>>>>>>> dev
 
 // function to pull a question and put it on the screen
 $(".question-row")
@@ -120,6 +121,13 @@ var x=0;
 // function for dealing with questions as they get answered
 submitBtn.addEventListener("click", function () {
  x++;
+ if (x===15){
+  console.log("all answered");
+  scorePage();
+  hideGrid();
+  hideQuiz();
+  return
+}
   if (userAnswer.value.toLowerCase() == answerText.toLowerCase()) {
     value = parseInt(value);
     score = score + value;
@@ -136,10 +144,6 @@ submitBtn.addEventListener("click", function () {
     getQuote();
     showQuote();
   } console.log($(".question-row").children());
-  if (x===15){
-    console.log("all answered");
-    scorePage();
-  }
 });
 
 $("#moreQuotes").on("click", function(){
@@ -153,50 +157,6 @@ $("#nextQuestion").on("click", function(){
 
 function wrongAnswer() {
   getQuote();
-}
-
-// function that shows the quote
-function showQuote() {
-  quoteContainer.classList.remove("hide");
-}
-
-// function that hides shows the quote
-function hideQuote() {
-  quoteContainer.classList.add("hide");
-}
-
-// function that hides shows the quiz
-function showQuiz() {
-  questionContainer.classList.remove("hide");
-}
-
-// function that hides shows the quiz
-function showGrid() {
-  questionGrid.classList.remove("hide");
-}
-
-// function that hides shows the quiz
-function hideGrid() {
-  questionGrid.classList.add("hide");
-}
-
-// function that hides the quiz
-function hideQuiz() {
-  questionContainer.classList.add("hide");
-}
-// function that shows resultspage 
-function showFinal(){
-  $("#resultpage").removeClass("hide");
-}
-
-function removeTags(str) {
-  if (str === null || str === "") return false;
-  else str = str.toString();
-
-  // Regular expression to identify HTML tags in
-  // the input string. Replacing the identified
-  // HTML tag with a null string.
-  return str.replace(/(<([^>]+)>)/gi, "");
 }
 
 $(".dropdown-trigger").dropdown();
@@ -301,10 +261,73 @@ $("#category3")
       });
     }
   });
-
+  var pastScores = [];
   function scorePage () {
     showFinal();
-    $("#finalize").textContent = "Final Score is $" + score + "!";
+    $("#finalize").text("Final Score is $" + score + "!");
+    localStorage.setItem("score",JSON.stringify(score));
+    pastScores.push(score);
+    console.log(pastScores);
+    getScore();
   }
+<<<<<<< HEAD
+  function getScore(){
+    var storedScores = JSON.parse(localStorage.getItem("pastScores"));
+    if (storedScores){
+      for(i=0;i<storedScores.length;i++){
+        var pastScoresList = $("#pastScoresList");
+        var pastScoresListItem = document.createElement("li");
+        pastScoresListItem.textContent = storedScores[i];
+        pastScoresList.prepend(pastScoresListItem);
+        pastScores.push(storedScores[i]);
+      }
+    };
+    localStorage.setItem("pastScores",JSON.stringify(pastScores));
+  }
+// function that shows the quote
+function showQuote() {
+  quoteContainer.classList.remove("hide");
+}
 
+// function that hides shows the quote
+function hideQuote() {
+  quoteContainer.classList.add("hide");
+}
+
+// function that hides shows the quiz
+function showQuiz() {
+  questionContainer.classList.remove("hide");
+}
+
+// function that hides shows the quiz
+function showGrid() {
+  questionGrid.classList.remove("hide");
+}
+
+// function that hides shows the quiz
+function hideGrid() {
+  questionGrid.classList.add("hide");
+}
+
+// function that hides the quiz
+function hideQuiz() {
+  questionContainer.classList.add("hide");
+}
+// function that shows resultspage 
+function showFinal(){
+  $("#resultpage").removeClass("hide");
+}
+
+function removeTags(str) {
+  if (str === null || str === "") return false;
+  else str = str.toString();
+
+  // Regular expression to identify HTML tags in
+  // the input string. Replacing the identified
+  // HTML tag with a null string.
+  return str.replace(/(<([^>]+)>)/gi, "");
+}
+=======
+
+>>>>>>> dev
 

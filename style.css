@@ -190,6 +190,9 @@ h1 {
     color: var(--author);
     font-size: 28px;
 }
+#resultpage {
+    color:white;
+}
 
 #generateClues:hover,
 #generateClues:after {
