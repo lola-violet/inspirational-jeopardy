@@ -21,6 +21,11 @@ var category;
 var value;
 var score = 0;
 
+// Click listener for header to reload page
+$("#jeopardyHeader").on("click", function(event) {
+  location.reload();
+})
+
 // function to pull a question and put it on the screen
 $(".question-row")
   .children()
@@ -301,3 +306,5 @@ $("#category3")
     showFinal();
     $("#finalize").textContent = "Final Score is $" + score + "!";
   }
+
+
