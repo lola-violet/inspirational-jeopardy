@@ -12,6 +12,8 @@
     --lightish: #7c4dff;
     --button: #f50057;
     --buttonHov: #f65b91;
+    --quote: #f998ba;
+    --author: #f65b91;
 }
 
 body {
@@ -32,6 +34,10 @@ header {
     background-image: url('images/pj1-jeopardy-background.jpeg');
     color: var(--headerText);
     letter-spacing: 20px;
+}
+
+header:hover {
+    cursor: pointer;
 }
 
 h1 {
@@ -177,16 +183,43 @@ h1 {
 
 #myQuote {
     font-style: italic;
+    color: var(--quote);
 }
 
-#generateClues:hover,
-#generateClues:after {
+#quoteAuthor {
+    color: var(--author);
+    font-size: 28px;
+}
+#resultpage {
+    color:white;
+}
+
+#nextQuestion {
+    background-color: var(--lightish);
+}
+
+#nextQuestion:hover {
+    background-color: var(--dark);
+    cursor: pointer;
+}
+
+#moreQuotes {
+    background-color: var(--button);
+}
+
+#moreQuotes:hover {
     background-color: var(--buttonHov);
+    cursor: pointer;
+}
+
+#submit {
+    background-color: var(--lightish);
 }
 
 #submit:hover,
 #sumbit:after {
     background-color: var(--dark);
+    cursor: pointer;
 }
 
 .privacyPolicy{
@@ -196,4 +229,33 @@ h1 {
 #audio {
     display: flex;
     justify-content: center;
+}
+#widget {
+    background-color: black;
+}
+
+#finalize {
+    margin-bottom: 30px;
+}
+
+#pastScoresList {
+    justify-content: center;
+}
+
+#pastScoresList li {
+    text-align: center;
+}
+
+#return {
+    background-color: var(--button);
+    margin-top: 40px;
+}
+
+#return:hover {
+    background-color: var(--buttonHov);
+    cursor: pointer;
+}
+
+#scoreListLabel {
+    color: var(--quote);
 }

@@ -16,11 +16,11 @@
        <!-- <link rel="stylesheet" href="./reset.css"> -->
        <link rel="stylesheet" href="./style.css">
     <title>Inspirational Jeopardy</title>
-    <link class="favi" rel="favicon" type="image/jpg" href="/images/pj1-jeopardy-globe-fav.jpeg">
+    <link rel="favicon" type="image/icon" href="/images/pj1-jeopardy-globe-favi-Small.ico">
 </head>
 <body>
   <header>
-    <h1 class="center-align">Inspirational Jeopardy!</h1>
+    <h1 id="jeopardyHeader" class="center-align">Inspirational Jeopardy!</h1>
   </header>
   <br>
   <div class="container">
@@ -132,7 +132,7 @@
             </div>
           </div>
           <br>
-          <button id="submit" class="btn waves-effect waves-light deep-purple accent-2 myAnswers" type="submit">Submit Answer</button>
+          <button id="submit" class="btn myAnswers" type="submit">Submit Answer</button>
         </div>
         
       </div>
@@ -151,8 +151,8 @@
             </div>
           </div>
           <br>
-          <button id="moreQuotes" class="btn waves-effect waves-light pink accent-3 myAnswers" type="submit">I need more inspiration</button>
-          <button id="nextQuestion" class="btn waves-effect waves-light deep-purple accent-2 myAnswers" type="submit">Next Question</button>
+          <button id="moreQuotes" class="btn myAnswers" type="submit">I need more inspiration</button>
+          <button id="nextQuestion" class="btn myAnswers" type="submit">Next Question</button>
         </div>
 
       </div>
@@ -163,12 +163,18 @@
 
         <div id="resultpage" class="hide">
           <h4 id="finalize"></h4>
-          <p id="results1"></p>
+
+          <h5 id="scoreListLabel"></h5>
+          <ul id="pastScoresList">
+
+          </ul>
+          <!-- <p id="results1"></p>
           <p id="results2"></p>
           <p id="results3"></p>
           <p id="results4"></p>
-          <p id="results5"></p>
-          <a id="return" class="waves-effect waves-light pink accent-3 btn-large">Start Again!</a>
+          <p id="results5"></p> -->
+          <a id="return" class="btn-large">Start Again!</a>
+
         </div>
 
       </div>
