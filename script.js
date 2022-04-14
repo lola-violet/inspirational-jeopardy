@@ -24,8 +24,7 @@ var score = 0;
 // Click listener for header to reload page
 $("#jeopardyHeader").on("click", function(event) {
   location.reload();
-})
->>>>>>> dev
+});
 
 // function to pull a question and put it on the screen
 $(".question-row")
@@ -270,7 +269,6 @@ $("#category3")
     console.log(pastScores);
     getScore();
   }
-<<<<<<< HEAD
   function getScore(){
     var storedScores = JSON.parse(localStorage.getItem("pastScores"));
     if (storedScores){
@@ -327,7 +325,4 @@ function removeTags(str) {
   // HTML tag with a null string.
   return str.replace(/(<([^>]+)>)/gi, "");
 }
-=======
-
->>>>>>> dev
 
