@@ -303,8 +303,12 @@ $("#category3")
   });
 
   function scorePage () {
+<<<<<<< HEAD
+    $("#finalize").textContent = "Final Score is" + score + "!";
+=======
     showFinal();
     $("#finalize").textContent = "Final Score is $" + score + "!";
+>>>>>>> dev
   }
 
 
