@@ -270,7 +270,6 @@ $("#category3")
     console.log(pastScores);
     getScore();
   }
-<<<<<<< HEAD
   function getScore(){
     var storedScores = JSON.parse(localStorage.getItem("pastScores"));
     if (storedScores){
@@ -327,7 +326,4 @@ function removeTags(str) {
   // HTML tag with a null string.
   return str.replace(/(<([^>]+)>)/gi, "");
 }
-=======
-
->>>>>>> dev
 
