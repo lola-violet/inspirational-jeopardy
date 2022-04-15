@@ -268,13 +268,13 @@ $("#category3")
 $("#return").on("click",function(){
   location.reload();
 })
-// Brings up the score page once the game is finished
-  function scorePage () {
-    $("#finalize").textContent = "Final Score is" + score + "!";
-  }
 
   var audio = document.getElementById('audio')
   audio.volume = 0.2;
+
+// Brings up the score page once the game is finished
+  function scorePage () {
+    $("#finalize").textContent = "Final Score is" + score + "!";
     showFinal();
     $("#finalize").text("Final Score is $" + score + "!");
     localStorage.setItem("score",JSON.stringify(score));
