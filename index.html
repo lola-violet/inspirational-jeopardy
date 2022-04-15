@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@200&display=swap" rel="stylesheet">
+       <!-- Compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+       <!-- Compiled and minified JavaScript -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+       <!-- <link rel="stylesheet" href="./reset.css"> -->
+       <link rel="stylesheet" href="./style.css">
+    <title>Inspirational Jeopardy</title>
+    <link rel="favicon" type="image/icon" href="/images/pj1-jeopardy-globe-favi-Small.ico">
+</head>
+<body>
+  <header>
+    <h1 id="jeopardyHeader" class="center-align">Inspirational Jeopardy!</h1>
+  </header>
+  <br>
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12 center-align">
+
+        <div id="parameters">
+          <h3 class="custom-head">Select Categories</h3>
+
+          <!-- Dropdown Trigger for Category 1 -->
+          <a class="dropdown-trigger btn custom-drop" href="#" data-target="category1">First category</a>
+          <!-- Dropdown Structure for Category 1 -->
+          <ul id="category1" class="dropdown-content custom-list">
+            <li><a href="#!" class="potpourriiii">Potpourriiii</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="stuipidAnswers">Stupid Answers</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="americanHistory">American History</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="animals">Animals</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="threeLetterWords">Three Letter Words</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="people">People</a></li>
+          </ul>
+          <br>
+          <!-- Dropdown Trigger for Category 2 -->
+          <a class="dropdown-trigger btn custom-drop" href="#" data-target="category2">Second category</a>
+          <!-- Dropdown Structure for Category 2 -->
+          <ul id="category2" class="dropdown-content custom-list">
+            <li><a href="#!" class="potpourriiii">Potpourriiii</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="stuipidAnswers">Stupid Answers</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="americanHistory">American History</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="animals">Animals</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="threeLetterWords">Three Letter Words</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="people">People</a></li>
+          </ul>
+          <br>
+          <!-- Dropdown Trigger for Category 3 -->
+          <a class="dropdown-trigger btn custom-drop" href="#" data-target="category3">Third category</a>
+          <!-- Dropdown Structure for Category 1 -->
+          <ul id="category3" class="dropdown-content custom-list">
+            <li><a href="#!" class="potpourriiii">Potpourriiii</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="stuipidAnswers">Stupid Answers</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="americanHistory">American History</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="animals">Animals</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="threeLetterWords">Three Letter Words</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!" class="people">People</a></li>
+          </ul>
+          <br>
+          <a id="start-quiz" class="btn-large">Generate Jeopardy!</a>
+        </div>
+
+      </div>
+    </div>
+      
+    <div id="question-grid" class="flexbox hide">
+      <div class="row custom-row" id="category-labels">
+        <div class="grid-label col s3 category-1" id="category-display-1"><h5>Category 1</h5></div>
+        <div class="grid-label col s3 category-2" id="category-display-2"><h5>Category 2</h5></div>
+        <div class="grid-label col s3 category-3" id="category-display-3"><h5>Category 3</h5></div>
+      </div>
+      <div class="row custom-row question-row" id="q200" data-value="200">
+        <div class="grid col s3 category-1"><h5>$200</h5></div>
+        <div class="grid col s3 category-2"><h5>$200</h5></div>
+        <div class="grid col s3 category-3"><h5>$200</h5></div>
+      </div>
+      <div class="row custom-row question-row" id="q400" data-value="400">
+        <div class="grid col s3 category-1"><h5>$400</h5></div>
+        <div class="grid col s3 category-2"><h5>$400</h5></div>
+        <div class="grid col s3 category-3"><h5>$400</h5></div>
+      </div>
+      <div class="row custom-row question-row" id="q600" data-value="600">
+        <div class="grid col s3 category-1"><h5>$600</h5></div>
+        <div class="grid col s3 category-2"><h5>$600</h5></div>
+        <div class="grid col s3 category-3"><h5>$600</h5></div>
+      </div>
+      <div class="row custom-row question-row" id="q800" data-value="800">
+        <div class="grid col s3 category-1"><h5>$800</h5></div>
+        <div class="grid col s3 category-2"><h5>$800</h5></div>
+        <div class="grid col s3 category-3"><h5>$800</h5></div>
+      </div>
+      <div class="row custom-row question-row" id="q1000" data-value="1000">
+        <div class="grid col s3 category-1"><h5>$1000</h5></div>
+        <div class="grid col s3 category-2"><h5>$1000</h5></div>
+        <div class="grid col s3 category-3"><h5>$1000</h5></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 center-align">
+
+        <div id="questions" class="hide">
+          <h3 id="question1">Question #1</h3>
+          <div class="form">
+            <div class="input-field">
+              <textarea id="textarea1" class="materialize-textarea" placeholder="What is..."></textarea>
+            </div>
+          </div>
+          <br>
+          <button id="submit" class="btn myAnswers" type="submit">Submit Answer</button>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 center-align">
+
+        <div id="quoteContainer" class="hide">
+          <h4 id="questionResult"></h3>
+          <div class="form">
+            <div class="input-field">
+              <h3 id="myQuote" class=""></h3>
+              <h4 id="quoteAuthor"></h4>
+              <h4 id="correctAnswerDisplay"></h4>
+            </div>
+          </div>
+          <br>
+          <button id="moreQuotes" class="btn myAnswers" type="submit">I need more inspiration</button>
+          <button id="nextQuestion" class="btn myAnswers" type="submit">Next Question</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 center-align">
+
+        <div id="resultpage" class="hide">
+          <h4 id="finalize"></h4>
+
+          <h5 id="scoreListLabel"></h5>
+          <ul id="pastScoresList">
+
+          </ul>
+
+          <a id="return" class="btn-large">Start Again!</a>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>  
+<!-- <br> -->
+<!-- <div id="audio">
+    <audio controls loop>
+      <source 
+        src="./images/Jeopardy-theme-song.mp3" type="audio/mp3">
+    </audio>
+  </div>> -->
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
