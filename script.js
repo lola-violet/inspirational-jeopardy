@@ -20,11 +20,13 @@ var people = 442;
 var category;
 var value;
 var score = 0;
+var pastScores = [];
 
 // Click listener for header to reload page
 $("#jeopardyHeader").on("click", function(event) {
   location.reload();
-})
+
+});
 
 
 // function to pull a question and put it on the screen
@@ -118,7 +120,7 @@ $("#start-quiz").on("click", function () {
 });
 
 var x=0;
-// function for dealing with questions as they get answered
+// function for dealing with questions as they get answered, ends game
 submitBtn.addEventListener("click", function () {
  x++;
  if (x===15){
@@ -128,6 +130,7 @@ submitBtn.addEventListener("click", function () {
   hideQuiz();
   return
 }
+// makes any text input to lowercase to match with answer
   if (userAnswer.value.toLowerCase() == answerText.toLowerCase()) {
     value = parseInt(value);
     score = score + value;
@@ -261,8 +264,17 @@ $("#category3")
       });
     }
   });
-  var pastScores = [];
+  // starts the game over
+$("#return").on("click",function(){
+  location.reload();
+})
+
+  // var audio = document.getElementById('audio')
+  // audio.volume = 0.2;
+
+// Brings up the score page once the game is finished
   function scorePage () {
+    $("#finalize").textContent = "Final Score is" + score + "!";
     showFinal();
     $("#finalize").text("Final Score is $" + score + "!");
     localStorage.setItem("score",JSON.stringify(score));
@@ -270,6 +282,8 @@ $("#category3")
     console.log(pastScores);
     getScore();
   }
+
+  // Displays past scores
   function getScore(){
     var storedScores = JSON.parse(localStorage.getItem("pastScores"));
     if (storedScores){

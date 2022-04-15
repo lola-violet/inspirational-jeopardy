@@ -226,6 +226,10 @@ h1 {
     background-color: black;
 }
 
+#audio {
+    display: flex;
+    justify-content: center;
+}
 #widget {
     background-color: black;
 }
