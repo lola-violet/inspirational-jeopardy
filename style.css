@@ -194,20 +194,68 @@ h1 {
     color:white;
 }
 
-#generateClues:hover,
-#generateClues:after {
+#nextQuestion {
+    background-color: var(--lightish);
+}
+
+#nextQuestion:hover {
+    background-color: var(--dark);
+    cursor: pointer;
+}
+
+#moreQuotes {
+    background-color: var(--button);
+}
+
+#moreQuotes:hover {
     background-color: var(--buttonHov);
+    cursor: pointer;
+}
+
+#submit {
+    background-color: var(--lightish);
 }
 
 #submit:hover,
 #sumbit:after {
     background-color: var(--dark);
+    cursor: pointer;
 }
 
 .privacyPolicy{
     background-color: black;
 }
 
+#audio {
+    display: flex;
+    justify-content: center;
+}
 #widget {
     background-color: black;
+}
+
+#finalize {
+    margin-bottom: 30px;
+}
+
+#pastScoresList {
+    justify-content: center;
+}
+
+#pastScoresList li {
+    text-align: center;
+}
+
+#return {
+    background-color: var(--button);
+    margin-top: 40px;
+}
+
+#return:hover {
+    background-color: var(--buttonHov);
+    cursor: pointer;
+}
+
+#scoreListLabel {
+    color: var(--quote);
 }
