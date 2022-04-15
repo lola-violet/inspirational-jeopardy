@@ -269,8 +269,8 @@ $("#return").on("click",function(){
   location.reload();
 })
 
-  var audio = document.getElementById('audio')
-  audio.volume = 0.2;
+  // var audio = document.getElementById('audio')
+  // audio.volume = 0.2;
 
 // Brings up the score page once the game is finished
   function scorePage () {
